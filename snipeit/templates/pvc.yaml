@@ -1,0 +1,17 @@
+{{- range $volname := .Values.volumes }}
+---
+kind: PersistentVolumeClaim
+apiVersion: v1
+metadata:
+  name: {{ $volname.persistentVolumeClaim.claimName }}
+  labels:
+    {{ include "snipeit.labels" $ | indent 4 | trim }}
+spec:
+  accessModes:
+    - {{ $.Values.snipeit.persistence.accessMode }}
+  resources:
+    requests:
+      storage: {{ $.Values.snipeit.persistence.size }}
+
+  storageClassName: {{ $.Values.snipeit.persistence.storageClass }}
+{{- end }}

@@ -1,0 +1,67 @@
+---
+apiVersion: batch/v1
+kind: Job
+metadata:
+  name: generate-app-key
+  annotations:
+    "helm.sh/hook": post-install, post-upgrade
+    "helm.sh/hook-weight": "-5"
+    "helm.sh/hook-delete-policy": before-hook-creation,hook-succeeded
+spec:
+  template:
+    spec:
+      serviceAccountName: laravel-key-generator-sa
+      restartPolicy: OnFailure
+      {{- with .Values.podSecurityContext }}
+      securityContext:
+        {{- toYaml . | nindent 8 }}
+      {{- end }}
+      volumes:
+      - name: shared-data
+        emptyDir: {}
+      initContainers:
+      - name: php-key-generator
+        {{- with .Values.securityContext }}
+        securityContext:
+          {{- toYaml . | nindent 12 }}
+        {{- end }}
+        image: "{{ .Values.image.repository }}:{{ .Values.image.tag | default .Chart.AppVersion }}"
+        command: ["sh", "-c"]
+        args:
+          - |
+            #!/bin/sh
+            set -e
+            echo "Generate key"
+            php artisan key:generate --show > /shared-data/app-key
+            echo "Generated"
+        volumeMounts:
+        - name: shared-data
+          mountPath: /shared-data
+      containers:
+      - name: kubectl-secret-creator
+        image: bitnami/kubectl:latest
+        {{- with .Values.securityContext }}
+        securityContext:
+          {{- toYaml . | nindent 12 }}
+        {{- end }}
+        command: ["sh", "-c"]
+        args:
+          - |
+            #!/bin/sh
+            set -e
+            SECRET_NAME="{{ .Values.snipeit.config.appKey.name }}"
+            APP_KEY=$(cat /shared-data/app-key)
+
+            echo "Prüfe, ob Secret existiert..."
+            if kubectl get secret $SECRET_NAME >/dev/null 2>&1; then
+              echo "Secret exists"
+              exit 0
+            fi
+
+            echo "Erstelle Secret..."
+            kubectl create secret generic $SECRET_NAME --from-literal=APP_KEY="$APP_KEY"
+            echo "Secret created"
+
+        volumeMounts:
+        - name: shared-data
+          mountPath: /shared-data
