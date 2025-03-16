@@ -3,7 +3,27 @@ entries:
   snipeit:
   - apiVersion: v2
     appVersion: 8.0.4
-    created: "2025-03-16T17:52:49.4638026+01:00"
+    created: "2025-03-16T18:00:07.5636352+01:00"
+    dependencies:
+    - name: mariadb
+      repository: https://charts.bitnami.com/bitnami
+      version: 20.4.1
+    description: A Helm chart for providing snipe-it to kubernetes
+    digest: 4e9878f53d41fea79929cd7764ccb31ab98daea5f70ad633856597bb44a3c070
+    home: https://snipeitapp.com
+    icon: https://github.com/snipe/snipe-it/blob/eb9cfbaed6fc830e9b114c625896a636842f2d1a/public/img/demo/snipe-logo-bug.png?raw=true
+    keywords:
+    - snipeit
+    - inventory
+    - asset management
+    name: snipeit
+    type: application
+    urls:
+    - snipeit-1.0.2.tgz
+    version: 1.0.2
+  - apiVersion: v2
+    appVersion: 8.0.4
+    created: "2025-03-16T18:00:07.5607581+01:00"
     dependencies:
     - name: mariadb
       repository: https://charts.bitnami.com/bitnami
@@ -23,7 +43,7 @@ entries:
     version: 1.0.1
   - apiVersion: v2
     appVersion: 8.0.4
-    created: "2025-03-16T17:52:49.4606704+01:00"
+    created: "2025-03-16T18:00:07.557758+01:00"
     dependencies:
     - name: mariadb
       repository: https://charts.bitnami.com/bitnami
@@ -43,7 +63,7 @@ entries:
     version: 1.0.0
   - apiVersion: v2
     appVersion: 8.0.4
-    created: "2025-03-16T17:52:49.4580825+01:00"
+    created: "2025-03-16T18:00:07.5552526+01:00"
     dependencies:
     - name: mariadb
       repository: https://charts.bitnami.com/bitnami
@@ -63,7 +83,7 @@ entries:
     version: 0.1.2
   - apiVersion: v2
     appVersion: 8.0.4
-    created: "2025-03-16T17:52:49.4544215+01:00"
+    created: "2025-03-16T18:00:07.5512517+01:00"
     dependencies:
     - name: mariadb
       repository: https://charts.bitnami.com/bitnami
@@ -83,7 +103,7 @@ entries:
     version: 0.1.1
   - apiVersion: v2
     appVersion: 8.0.4
-    created: "2025-03-16T17:52:49.4513033+01:00"
+    created: "2025-03-16T18:00:07.5487467+01:00"
     dependencies:
     - name: mariadb
       repository: https://charts.bitnami.com/bitnami
@@ -96,4 +116,4 @@ entries:
     urls:
     - snipeit-0.1.0.tgz
     version: 0.1.0
-generated: "2025-03-16T17:52:49.4473984+01:00"
+generated: "2025-03-16T18:00:07.5452837+01:00"
