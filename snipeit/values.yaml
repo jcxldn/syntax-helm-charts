@@ -30,7 +30,9 @@ snipeit:
     sessions:
       mountPath: /var/www/html/storage/framework/sessions
       subPath: sessions
-
+    backups:
+      mountPath: /var/www/html/storage/app/backups
+      subPath: backups
 
 image:
   repository: snipe/snipe-it
