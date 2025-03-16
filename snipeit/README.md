@@ -38,6 +38,12 @@ snipeit.config.persistence.size   | "2Gi"   | storage space for snipeit
 snipeit.config.url   | "http://snipeit.example.com"   | App url for snipeit 
 snipeit.config.timezone   | "Europe/Berlin"   | App timezone
 snipeit.config.locale   | "en"   | App locale
+image.repository  | "snipe/snipe-it"   | image repo for snipeit app
+image.tag  | "v8.0.4-alpine"   | image tag for snipeit app
+ingress.enabled   | "false"   | use ingress
+ingress.className   | ""   | ingress name like nginx
+ingress.annotations   | {}   | ingress annotations
+ingress.hosts   | list   | list of hosts
 
 ### customisation example
 For example this values file you can install it with:
