@@ -117,6 +117,9 @@ volumeMounts:
   - name: data
     mountPath: "{{ .Values.snipeit.persistence.sessions.mountPath }}"
     subPath: "{{ .Values.snipeit.persistence.sessions.subPath }}"
+  - name: data
+    mountPath: "{{ .Values.snipeit.persistence.backups.mountPath }}"
+    subPath: "{{ .Values.snipeit.persistence.backups.subPath }}"
 
 nodeSelector: {}
 
