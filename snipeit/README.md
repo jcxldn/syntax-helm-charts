@@ -11,3 +11,12 @@ You dont need to generate the lavarel app key, at the first start a job generate
 You only need to overite the default values with your own values and youre done. 
 
 ## install 
+- helm repo add syntax3rror404  https://syntax3rror404.github.io/helm-charts/charts
+- helm install snipeit syntax3rror404/snipeit -n snipeit --create-namespace
+
+## upgrade
+- helm upgrade snipeit syntax3rror404/snipeit -n snipeit
+
+## uninstall 
+- helm uninstall snipeit -n snipeit
+- kubectl delete ns snipeit
