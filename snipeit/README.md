@@ -45,7 +45,7 @@ For example this values file you can install it with:
 helm install snipeit syntax3rror404/snipeit -n snipeit --create-namespace -f myvaules.yaml
 
 
-´´´yaml
+```yaml
 # myvaules.yaml
 ---
 mariadb:
@@ -75,4 +75,4 @@ ingress:
     - secretName: snipeit-tls
       hosts:
         - snipeit.mycooldomain.com
-´´´
+```
