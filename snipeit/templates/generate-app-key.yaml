@@ -54,13 +54,13 @@ spec:
             SECRET_NAME="{{ .Values.snipeit.config.appKey.name }}"
             APP_KEY=$(cat /shared-data/app-key)
 
-            echo "Prüfe, ob Secret existiert..."
+            echo "Check if secret exists"
             if kubectl get secret $SECRET_NAME >/dev/null 2>&1; then
               echo "Secret exists"
               exit 0
             fi
 
-            echo "Erstelle Secret..."
+            echo "Create secret..."
             kubectl create secret generic $SECRET_NAME --from-literal=APP_KEY="$APP_KEY"
             echo "Secret created"
 
