@@ -1,6 +1,7 @@
 apiVersion: v2
 name: snipeit
 description: A Helm chart for providing snipe-it to kubernetes
+icon: https://github.com/snipe/snipe-it/blob/eb9cfbaed6fc830e9b114c625896a636842f2d1a/public/img/demo/snipe-logo-bug.png?raw=true
 
 type: application
 version: 0.1.0
