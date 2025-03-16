@@ -3,7 +3,7 @@ entries:
   snipeit:
   - apiVersion: v2
     appVersion: 8.0.4
-    created: "2025-03-16T18:00:07.5636352+01:00"
+    created: "2025-03-16T19:34:44.8873591+01:00"
     dependencies:
     - name: mariadb
       repository: https://charts.bitnami.com/bitnami
@@ -23,7 +23,7 @@ entries:
     version: 1.0.2
   - apiVersion: v2
     appVersion: 8.0.4
-    created: "2025-03-16T18:00:07.5607581+01:00"
+    created: "2025-03-16T19:34:44.8847813+01:00"
     dependencies:
     - name: mariadb
       repository: https://charts.bitnami.com/bitnami
@@ -43,7 +43,7 @@ entries:
     version: 1.0.1
   - apiVersion: v2
     appVersion: 8.0.4
-    created: "2025-03-16T18:00:07.557758+01:00"
+    created: "2025-03-16T19:34:44.8818734+01:00"
     dependencies:
     - name: mariadb
       repository: https://charts.bitnami.com/bitnami
@@ -61,59 +61,4 @@ entries:
     urls:
     - snipeit-1.0.0.tgz
     version: 1.0.0
-  - apiVersion: v2
-    appVersion: 8.0.4
-    created: "2025-03-16T18:00:07.5552526+01:00"
-    dependencies:
-    - name: mariadb
-      repository: https://charts.bitnami.com/bitnami
-      version: 20.4.1
-    description: A Helm chart for providing snipe-it to kubernetes
-    digest: bf658301306a3b07284e401cf0cc92b4643f95edbe60a66f3ad43f2e2b7a4e6e
-    home: https://snipeitapp.com
-    icon: https://github.com/snipe/snipe-it/blob/eb9cfbaed6fc830e9b114c625896a636842f2d1a/public/img/demo/snipe-logo-bug.png?raw=true
-    keywords:
-    - snipeit
-    - inventory
-    - asset management
-    name: snipeit
-    type: application
-    urls:
-    - snipeit-0.1.2.tgz
-    version: 0.1.2
-  - apiVersion: v2
-    appVersion: 8.0.4
-    created: "2025-03-16T18:00:07.5512517+01:00"
-    dependencies:
-    - name: mariadb
-      repository: https://charts.bitnami.com/bitnami
-      version: 20.4.1
-    description: A Helm chart for providing snipe-it to kubernetes
-    digest: e0597b69492f0c630d9211f32b7a64d02ca6d8ff2f7cd5fdbe44c0a71185f5d9
-    home: https://snipeitapp.com
-    icon: https://github.com/snipe/snipe-it/blob/eb9cfbaed6fc830e9b114c625896a636842f2d1a/public/img/demo/snipe-logo-bug.png?raw=true
-    keywords:
-    - snipeit
-    - inventory
-    - asset management
-    name: snipeit
-    type: application
-    urls:
-    - snipeit-0.1.1.tgz
-    version: 0.1.1
-  - apiVersion: v2
-    appVersion: 8.0.4
-    created: "2025-03-16T18:00:07.5487467+01:00"
-    dependencies:
-    - name: mariadb
-      repository: https://charts.bitnami.com/bitnami
-      version: 20.4.1
-    description: A Helm chart for providing snipe-it to kubernetes
-    digest: 636b8fecf5980a35b783ce8b057f9401da365cb14aa3302ef7e0f28fb240aa23
-    icon: https://github.com/snipe/snipe-it/blob/eb9cfbaed6fc830e9b114c625896a636842f2d1a/public/img/demo/snipe-logo-bug.png?raw=true
-    name: snipeit
-    type: application
-    urls:
-    - snipeit-0.1.0.tgz
-    version: 0.1.0
-generated: "2025-03-16T18:00:07.5452837+01:00"
+generated: "2025-03-16T19:34:44.8789616+01:00"
