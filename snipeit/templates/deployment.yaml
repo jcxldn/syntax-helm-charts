@@ -9,6 +9,8 @@ spec:
   selector:
     matchLabels:
       {{- include "snipeit.selectorLabels" . | nindent 6 }}
+  strategy:
+    type: {{ .Values.updateStrategy }}
   template:
     metadata:
       {{- with .Values.podAnnotations }}
