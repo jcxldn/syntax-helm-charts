@@ -1,0 +1,19 @@
+apiVersion: v1
+entries:
+  snipeit:
+  - apiVersion: v2
+    appVersion: 8.0.4
+    created: "2025-03-16T16:23:48.980065+01:00"
+    dependencies:
+    - name: mariadb
+      repository: https://charts.bitnami.com/bitnami
+      version: 20.4.1
+    description: A Helm chart for providing snipe-it to kubernetes
+    digest: 636b8fecf5980a35b783ce8b057f9401da365cb14aa3302ef7e0f28fb240aa23
+    icon: https://github.com/snipe/snipe-it/blob/eb9cfbaed6fc830e9b114c625896a636842f2d1a/public/img/demo/snipe-logo-bug.png?raw=true
+    name: snipeit
+    type: application
+    urls:
+    - snipeit-0.1.0.tgz
+    version: 0.1.0
+generated: "2025-03-16T16:23:48.9769766+01:00"
