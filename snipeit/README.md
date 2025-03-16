@@ -11,15 +11,15 @@ You dont need to generate the lavarel app key, at the first start a job generate
 You only need to overite the default values with your own values and youre done. 
 
 ## install 
-- helm repo add syntax3rror404  https://syntax3rror404.github.io/helm-charts/charts
-- helm install snipeit syntax3rror404/snipeit -n snipeit --create-namespace
+- `helm repo add syntax3rror404  https://syntax3rror404.github.io/helm-charts/charts`
+- `helm install snipeit syntax3rror404/snipeit -n snipeit --create-namespace`
 
 ## upgrade
-- helm upgrade snipeit syntax3rror404/snipeit -n snipeit
+- `helm upgrade snipeit syntax3rror404/snipeit -n snipeit`
 
 ## uninstall 
-- helm uninstall snipeit -n snipeit
-- kubectl delete ns snipeit
+- `helm uninstall snipeit -n snipeit`
+- `kubectl delete ns snipeit`
 
 ## customisation
 Please note that a simple install only use default variables like example.com for the url or unsafe passwords for the database. Please create your own values file.
@@ -48,7 +48,7 @@ ingress.hosts   | list   | list of hosts
 ### customisation example
 For example this values file you can install it with:
 
-helm install snipeit syntax3rror404/snipeit -n snipeit --create-namespace -f myvaules.yaml
+- `helm install snipeit syntax3rror404/snipeit -n snipeit --create-namespace -f myvaules.yaml`
 
 
 ```yaml
