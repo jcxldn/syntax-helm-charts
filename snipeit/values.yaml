@@ -24,15 +24,6 @@ snipeit:
     size: 2Gi
     storageClass: longhorn
     accessMode: ReadWriteOnce
-    snipeit:
-      mountPath: /var/lib/snipeit
-      subPath: snipeit
-    sessions:
-      mountPath: /var/www/html/storage/framework/sessions
-      subPath: sessions
-    backups:
-      mountPath: /var/www/html/storage/app/backups
-      subPath: backups
 
 image:
   repository: snipe/snipe-it
@@ -112,14 +103,14 @@ volumes:
 # Additional volumeMounts on the output Deployment definition.
 volumeMounts:
   - name: data
-    mountPath: "{{ .Values.snipeit.persistence.snipeit.mountPath }}"
-    subPath: "{{ .Values.snipeit.persistence.snipeit.subPath }}"
+    mountPath: "/var/lib/snipeit"
+    subPath: "www"
   - name: data
-    mountPath: "{{ .Values.snipeit.persistence.sessions.mountPath }}"
-    subPath: "{{ .Values.snipeit.persistence.sessions.subPath }}"
+    mountPath: "/var/www/html/storage/framework/sessions"
+    subPath: "sessions"
   - name: data
-    mountPath: "{{ .Values.snipeit.persistence.backups.mountPath }}"
-    subPath: "{{ .Values.snipeit.persistence.backups.subPath }}"
+    mountPath: "/var/www/html/storage/app/backups"
+    subPath: "backups"
 
 nodeSelector: {}
 
