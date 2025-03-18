@@ -3,7 +3,7 @@ entries:
   snipeit:
   - apiVersion: v2
     appVersion: 8.0.4
-    created: "2025-03-18T02:06:45.0530628+01:00"
+    created: "2025-03-18T02:09:49.5241339+01:00"
     dependencies:
     - name: mariadb
       repository: https://charts.bitnami.com/bitnami
@@ -23,7 +23,7 @@ entries:
     version: 1.1.0
   - apiVersion: v2
     appVersion: 8.0.4
-    created: "2025-03-18T02:06:45.0504799+01:00"
+    created: "2025-03-18T02:09:49.5231274+01:00"
     dependencies:
     - name: mariadb
       repository: https://charts.bitnami.com/bitnami
@@ -43,7 +43,7 @@ entries:
     version: 1.0.9
   - apiVersion: v2
     appVersion: 8.0.4
-    created: "2025-03-18T02:06:45.0442968+01:00"
+    created: "2025-03-18T02:09:49.5163708+01:00"
     dependencies:
     - name: mariadb
       repository: https://charts.bitnami.com/bitnami
@@ -63,7 +63,7 @@ entries:
     version: 1.0.8
   - apiVersion: v2
     appVersion: 8.0.4
-    created: "2025-03-18T02:06:45.0380658+01:00"
+    created: "2025-03-18T02:09:49.5163708+01:00"
     dependencies:
     - name: mariadb
       repository: https://charts.bitnami.com/bitnami
@@ -83,7 +83,7 @@ entries:
     version: 1.0.7
   - apiVersion: v2
     appVersion: 8.0.4
-    created: "2025-03-18T02:06:45.0308248+01:00"
+    created: "2025-03-18T02:09:49.5133528+01:00"
     dependencies:
     - name: mariadb
       repository: https://charts.bitnami.com/bitnami
@@ -101,4 +101,4 @@ entries:
     urls:
     - snipeit-1.0.6.tgz
     version: 1.0.6
-generated: "2025-03-18T02:06:45.0219787+01:00"
+generated: "2025-03-18T02:09:49.511831+01:00"
