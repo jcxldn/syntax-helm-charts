@@ -25,11 +25,10 @@ snipeit:
     size: 2Gi
     storageClass: longhorn
     accessMode: ReadWriteOnce
-
-image:
-  repository: snipe/snipe-it
-  pullPolicy: IfNotPresent
-  tag: "v8.0.4-alpine"
+  image:
+    repository: snipe/snipe-it
+    pullPolicy: IfNotPresent
+    tag: "v8.0.4-alpine"
 
 imagePullSecrets: []
 nameOverride: ""
