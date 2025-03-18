@@ -41,7 +41,7 @@ spec:
           mountPath: /shared-data
       containers:
       - name: kubectl-secret-creator
-        image: bitnami/kubectl:latest
+        image: docker.io/bitnami/kubectl:latest
         {{- with .Values.securityContext }}
         securityContext:
           {{- toYaml . | nindent 12 }}

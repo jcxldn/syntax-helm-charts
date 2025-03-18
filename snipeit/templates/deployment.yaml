@@ -34,7 +34,7 @@ spec:
       {{- end }}
       initContainers:
         - name: set-session-permission
-          image: alpine
+          image: docker.io/alpine:latest
           command: ["sh", "-c", "chown -R 100:101 /var/www/html/storage/framework/sessions"]
           {{- with .Values.volumeMounts }}
           volumeMounts:
