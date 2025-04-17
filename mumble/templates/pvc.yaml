@@ -7,7 +7,7 @@ metadata:
     {{- include "mumble.labels" . | nindent 4 }}
 spec:
   accessModes:
-    - {{ .Values.persistence.accessModes | quote }}
+    {{- toYaml .Values.persistence.accessModes | nindent 4 }}
   {{- if .Values.persistence.storageClass }}
   storageClassName: {{ .Values.persistence.storageClass | quote }}
   {{- end }}
