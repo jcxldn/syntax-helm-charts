@@ -3,7 +3,24 @@ entries:
   mumble:
   - apiVersion: v2
     appVersion: v1.5.735-3
-    created: "2025-04-17T19:05:21.1430153+02:00"
+    created: "2025-04-17T19:17:28.6971713+02:00"
+    description: A Helm chart for providing mumble server to kubernetes
+    digest: da50982601f4cab6005b090d25d56628315d6967717ba1de1e33cffdf458e8ef
+    home: https://github.com/Syntax3rror404/helm-charts
+    icon: https://upload.wikimedia.org/wikipedia/commons/thumb/8/8f/Icons_mumble.svg/600px-Icons_mumble.svg.png
+    keywords:
+    - mumble
+    - voip
+    name: mumble
+    sources:
+    - https://github.com/mumble-voip/mumble-docker
+    type: application
+    urls:
+    - mumble-0.9.1.tgz
+    version: 0.9.1
+  - apiVersion: v2
+    appVersion: v1.5.735-3
+    created: "2025-04-17T19:17:28.6966707+02:00"
     description: A Helm chart for providing mumble server to kubernetes
     digest: 75427f931f2be862fbcb4e45c175ab916885bbc70e462d429028a1e4cb186e20
     home: https://github.com/Syntax3rror404/helm-charts
@@ -21,7 +38,7 @@ entries:
   snipeit:
   - apiVersion: v2
     appVersion: 8.0.4
-    created: "2025-04-17T19:05:21.2128289+02:00"
+    created: "2025-04-17T19:17:28.7281706+02:00"
     dependencies:
     - name: mariadb
       repository: https://charts.bitnami.com/bitnami
@@ -44,7 +61,7 @@ entries:
     version: 1.1.6
   - apiVersion: v2
     appVersion: 8.0.4
-    created: "2025-04-17T19:05:21.2073285+02:00"
+    created: "2025-04-17T19:17:28.7251707+02:00"
     dependencies:
     - name: mariadb
       repository: https://charts.bitnami.com/bitnami
@@ -67,7 +84,7 @@ entries:
     version: 1.1.5
   - apiVersion: v2
     appVersion: 8.0.4
-    created: "2025-04-17T19:05:21.2010838+02:00"
+    created: "2025-04-17T19:17:28.7226707+02:00"
     dependencies:
     - name: mariadb
       repository: https://charts.bitnami.com/bitnami
@@ -90,7 +107,7 @@ entries:
     version: 1.1.4
   - apiVersion: v2
     appVersion: 8.0.4
-    created: "2025-04-17T19:05:21.1954548+02:00"
+    created: "2025-04-17T19:17:28.7201711+02:00"
     dependencies:
     - name: mariadb
       repository: https://charts.bitnami.com/bitnami
@@ -110,7 +127,7 @@ entries:
     version: 1.1.3
   - apiVersion: v2
     appVersion: 8.0.4
-    created: "2025-04-17T19:05:21.1895837+02:00"
+    created: "2025-04-17T19:17:28.7176705+02:00"
     dependencies:
     - name: mariadb
       repository: https://charts.bitnami.com/bitnami
@@ -130,7 +147,7 @@ entries:
     version: 1.1.2
   - apiVersion: v2
     appVersion: 8.0.4
-    created: "2025-04-17T19:05:21.1835162+02:00"
+    created: "2025-04-17T19:17:28.7141702+02:00"
     dependencies:
     - name: mariadb
       repository: https://charts.bitnami.com/bitnami
@@ -150,7 +167,7 @@ entries:
     version: 1.1.1
   - apiVersion: v2
     appVersion: 8.0.4
-    created: "2025-04-17T19:05:21.1775158+02:00"
+    created: "2025-04-17T19:17:28.7116703+02:00"
     dependencies:
     - name: mariadb
       repository: https://charts.bitnami.com/bitnami
@@ -170,7 +187,7 @@ entries:
     version: 1.1.0
   - apiVersion: v2
     appVersion: 8.0.4
-    created: "2025-04-17T19:05:21.171016+02:00"
+    created: "2025-04-17T19:17:28.7086702+02:00"
     dependencies:
     - name: mariadb
       repository: https://charts.bitnami.com/bitnami
@@ -190,7 +207,7 @@ entries:
     version: 1.0.9
   - apiVersion: v2
     appVersion: 8.0.4
-    created: "2025-04-17T19:05:21.1650164+02:00"
+    created: "2025-04-17T19:17:28.7056709+02:00"
     dependencies:
     - name: mariadb
       repository: https://charts.bitnami.com/bitnami
@@ -210,7 +227,7 @@ entries:
     version: 1.0.8
   - apiVersion: v2
     appVersion: 8.0.4
-    created: "2025-04-17T19:05:21.1585153+02:00"
+    created: "2025-04-17T19:17:28.7031706+02:00"
     dependencies:
     - name: mariadb
       repository: https://charts.bitnami.com/bitnami
@@ -230,7 +247,7 @@ entries:
     version: 1.0.7
   - apiVersion: v2
     appVersion: 8.0.4
-    created: "2025-04-17T19:05:21.151515+02:00"
+    created: "2025-04-17T19:17:28.6996702+02:00"
     dependencies:
     - name: mariadb
       repository: https://charts.bitnami.com/bitnami
@@ -248,4 +265,4 @@ entries:
     urls:
     - snipeit-1.0.6.tgz
     version: 1.0.6
-generated: "2025-04-17T19:05:21.1425154+02:00"
+generated: "2025-04-17T19:17:28.6966707+02:00"
