@@ -1,9 +1,27 @@
 apiVersion: v1
 entries:
+  mumble:
+  - apiVersion: v2
+    appVersion: v1.5.735-3
+    created: "2025-04-17T19:05:21.1430153+02:00"
+    description: A Helm chart for providing mumble server to kubernetes
+    digest: 75427f931f2be862fbcb4e45c175ab916885bbc70e462d429028a1e4cb186e20
+    home: https://github.com/Syntax3rror404/helm-charts
+    icon: https://upload.wikimedia.org/wikipedia/commons/thumb/8/8f/Icons_mumble.svg/600px-Icons_mumble.svg.png
+    keywords:
+    - mumble
+    - voip
+    name: mumble
+    sources:
+    - https://github.com/mumble-voip/mumble-docker
+    type: application
+    urls:
+    - mumble-0.9.0.tgz
+    version: 0.9.0
   snipeit:
   - apiVersion: v2
     appVersion: 8.0.4
-    created: "2025-03-31T19:44:04.1336932+02:00"
+    created: "2025-04-17T19:05:21.2128289+02:00"
     dependencies:
     - name: mariadb
       repository: https://charts.bitnami.com/bitnami
@@ -26,7 +44,7 @@ entries:
     version: 1.1.6
   - apiVersion: v2
     appVersion: 8.0.4
-    created: "2025-03-31T19:44:04.130606+02:00"
+    created: "2025-04-17T19:05:21.2073285+02:00"
     dependencies:
     - name: mariadb
       repository: https://charts.bitnami.com/bitnami
@@ -49,7 +67,7 @@ entries:
     version: 1.1.5
   - apiVersion: v2
     appVersion: 8.0.4
-    created: "2025-03-31T19:44:04.1249101+02:00"
+    created: "2025-04-17T19:05:21.2010838+02:00"
     dependencies:
     - name: mariadb
       repository: https://charts.bitnami.com/bitnami
@@ -72,7 +90,7 @@ entries:
     version: 1.1.4
   - apiVersion: v2
     appVersion: 8.0.4
-    created: "2025-03-31T19:44:04.1192431+02:00"
+    created: "2025-04-17T19:05:21.1954548+02:00"
     dependencies:
     - name: mariadb
       repository: https://charts.bitnami.com/bitnami
@@ -92,7 +110,7 @@ entries:
     version: 1.1.3
   - apiVersion: v2
     appVersion: 8.0.4
-    created: "2025-03-31T19:44:04.1042799+02:00"
+    created: "2025-04-17T19:05:21.1895837+02:00"
     dependencies:
     - name: mariadb
       repository: https://charts.bitnami.com/bitnami
@@ -112,7 +130,7 @@ entries:
     version: 1.1.2
   - apiVersion: v2
     appVersion: 8.0.4
-    created: "2025-03-31T19:44:04.1042799+02:00"
+    created: "2025-04-17T19:05:21.1835162+02:00"
     dependencies:
     - name: mariadb
       repository: https://charts.bitnami.com/bitnami
@@ -132,7 +150,7 @@ entries:
     version: 1.1.1
   - apiVersion: v2
     appVersion: 8.0.4
-    created: "2025-03-31T19:44:04.0987385+02:00"
+    created: "2025-04-17T19:05:21.1775158+02:00"
     dependencies:
     - name: mariadb
       repository: https://charts.bitnami.com/bitnami
@@ -152,7 +170,7 @@ entries:
     version: 1.1.0
   - apiVersion: v2
     appVersion: 8.0.4
-    created: "2025-03-31T19:44:04.0941986+02:00"
+    created: "2025-04-17T19:05:21.171016+02:00"
     dependencies:
     - name: mariadb
       repository: https://charts.bitnami.com/bitnami
@@ -172,7 +190,7 @@ entries:
     version: 1.0.9
   - apiVersion: v2
     appVersion: 8.0.4
-    created: "2025-03-31T19:44:04.0885461+02:00"
+    created: "2025-04-17T19:05:21.1650164+02:00"
     dependencies:
     - name: mariadb
       repository: https://charts.bitnami.com/bitnami
@@ -192,7 +210,7 @@ entries:
     version: 1.0.8
   - apiVersion: v2
     appVersion: 8.0.4
-    created: "2025-03-31T19:44:04.0816983+02:00"
+    created: "2025-04-17T19:05:21.1585153+02:00"
     dependencies:
     - name: mariadb
       repository: https://charts.bitnami.com/bitnami
@@ -212,7 +230,7 @@ entries:
     version: 1.0.7
   - apiVersion: v2
     appVersion: 8.0.4
-    created: "2025-03-31T19:44:04.0754947+02:00"
+    created: "2025-04-17T19:05:21.151515+02:00"
     dependencies:
     - name: mariadb
       repository: https://charts.bitnami.com/bitnami
@@ -230,4 +248,4 @@ entries:
     urls:
     - snipeit-1.0.6.tgz
     version: 1.0.6
-generated: "2025-03-31T19:44:04.0659615+02:00"
+generated: "2025-04-17T19:05:21.1425154+02:00"
