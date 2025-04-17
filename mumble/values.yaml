@@ -3,6 +3,12 @@ image:
   tag: v1.5.735-3
   pullPolicy: IfNotPresent
 
+# Custom labels for all resources
+customLabels: {}
+  # team: devops
+  # environment: production
+  # app.kubernetes.io/part-of: mumble-cluster
+
 service:
   type: ClusterIP
   ports:
