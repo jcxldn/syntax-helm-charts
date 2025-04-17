@@ -1,0 +1,17 @@
+apiVersion: v2
+name: mumble
+description: A Helm chart for providing mumble server to kubernetes
+
+home: https://github.com/Syntax3rror404/helm-charts
+icon: https://upload.wikimedia.org/wikipedia/commons/thumb/8/8f/Icons_mumble.svg/600px-Icons_mumble.svg.png
+
+type: application
+version: 0.9.0
+appVersion: "v1.5.735-3"
+
+keywords:
+- mumble
+- voip
+
+sources:
+- https://github.com/mumble-voip/mumble-docker

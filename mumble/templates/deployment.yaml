@@ -1,0 +1,78 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: {{ include "mumble.fullname" . }}
+  labels:
+    {{- include "mumble.labels" . | nindent 4 }}
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      {{- include "mumble.selectorLabels" . | nindent 6 }}
+  template:
+    metadata:
+      labels:
+        {{- include "mumble.selectorLabels" . | nindent 8 }}
+    spec:
+      containers:
+        - name: {{ .Chart.Name }}
+          image: "{{ .Values.image.repository }}:{{ .Values.image.tag }}"
+          imagePullPolicy: {{ .Values.image.pullPolicy }}
+          ports:
+            - name: mumble-tcp
+              containerPort: 64738
+              protocol: TCP
+            - name: mumble-udp
+              containerPort: 64738
+              protocol: UDP
+          env:
+            {{- range $key, $value := .Values.config }}
+            - name: {{ printf "MUMBLE_CONFIG_%s" $key | upper }}
+              value: {{ $value | quote }}
+            {{- end }}
+            {{- if .Values.environment.acceptUnknownSettings }}
+            - name: MUMBLE_ACCEPT_UNKNOWN_SETTINGS
+              value: {{ .Values.environment.acceptUnknownSettings | quote }}
+            {{- end }}
+            {{- if .Values.environment.verbose }}
+            - name: MUMBLE_VERBOSE
+              value: {{ .Values.environment.verbose | quote }}
+            {{- end }}
+            {{- if not .Values.environment.chownData }}
+            - name: MUMBLE_CHOWN_DATA
+              value: {{ .Values.environment.chownData | quote }}
+            {{- end }}
+            {{- if .Values.environment.customConfigFile }}
+            - name: MUMBLE_CUSTOM_CONFIG_FILE
+              value: {{ .Values.environment.customConfigFile | quote }}
+            {{- end }}
+            - name: MUMBLE_SUPERUSER_PASSWORD
+              valueFrom:
+                secretKeyRef:
+                  name: {{ if .Values.superuserPassword.existingSecret }}{{ .Values.superuserPassword.existingSecret }}{{ else }}{{ include "mumble.fullname" . }}-superuser-password{{ end }}
+                  key: {{ .Values.superuserPassword.existingSecretKey | default "password" }}
+          volumeMounts:
+            - name: data
+              mountPath: /data
+          resources:
+            {{- toYaml .Values.resources | nindent 12 }}
+      {{- with .Values.nodeSelector }}
+      nodeSelector:
+        {{- toYaml . | nindent 8 }}
+      {{- end }}
+      {{- with .Values.affinity }}
+      affinity:
+        {{- toYaml . | nindent 8 }}
+      {{- end }}
+      {{- with .Values.tolerations }}
+      tolerations:
+        {{- toYaml . | nindent 8 }}
+      {{- end }}
+      volumes:
+        - name: data
+          {{- if .Values.persistence.enabled }}
+          persistentVolumeClaim:
+            claimName: {{ .Values.persistence.existingClaim | default (include "mumble.fullname" .) }}
+          {{- else }}
+          emptyDir: {}
+          {{- end }}
