@@ -1,0 +1,20 @@
+{{- if and .Values.teamspeak.persistence.enabled (not .Values.teamspeak.persistence.existingClaim) }}
+apiVersion: v1
+kind: PersistentVolumeClaim
+metadata:
+  name: {{ include "teamspeak.fullname" . }}-data
+  labels:
+    {{- include "teamspeak.labels" . | nindent 4 }}
+    {{- with .Values.customLabels }}
+    {{- toYaml . | nindent 4 }}
+    {{- end }}
+spec:
+  accessModes:
+    {{- toYaml .Values.teamspeak.persistence.accessModes | nindent 4 }}
+  {{- if .Values.teamspeak.persistence.storageClass }}
+  storageClassName: {{ .Values.teamspeak.persistence.storageClass | quote }}
+  {{- end }}
+  resources:
+    requests:
+      storage: {{ .Values.teamspeak.persistence.size | quote }}
+{{- end }}

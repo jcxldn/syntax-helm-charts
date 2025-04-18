@@ -1,0 +1,28 @@
+apiVersion: v1
+kind: Service
+metadata:
+  name: {{ include "teamspeak.fullname" . }}
+  labels:
+    {{- include "teamspeak.labels" . | nindent 4 }}
+    {{- with .Values.customLabels }}
+    {{- toYaml . | nindent 4 }}
+    {{- end }}
+spec:
+  type: {{ .Values.service.type }}
+  ports:
+    - name: voice-udp
+      port: {{ .Values.teamspeak.ports.udp }}
+      targetPort: {{ .Values.teamspeak.ports.udp }}
+      protocol: UDP
+    {{- range .Values.teamspeak.ports.tcp }}
+    - name: tcp-{{ . }}
+      port: {{ . }}
+      targetPort: {{ . }}
+      protocol: TCP
+    {{- end }}
+  selector:
+    {{- include "teamspeak.selectorLabels" . | nindent 4 }}
+  {{- if .Values.service.externalIPs }}
+  externalIPs:
+    {{- toYaml .Values.service.externalIPs | nindent 4 }}
+  {{- end }}

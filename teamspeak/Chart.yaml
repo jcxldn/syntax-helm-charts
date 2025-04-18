@@ -1,0 +1,22 @@
+apiVersion: v2
+name: teamspeak
+description: A Helm chart for providing teamspeak server to kubernetes
+
+home: https://github.com/Syntax3rror404/helm-charts
+icon: https://upload.wikimedia.org/wikipedia/commons/thumb/8/8f/Icons_mumble.svg/600px-Icons_mumble.svg.png
+
+type: application
+version: 0.9.0
+appVersion: "3.13.7"
+
+keywords:
+- teamspeak
+- voip
+
+sources:
+- https://hub.docker.com/_/teamspeak/
+
+dependencies:
+  - name: mariadb
+    version: "20.4.2"
+    repository: "https://charts.bitnami.com/bitnami"

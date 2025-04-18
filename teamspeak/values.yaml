@@ -1,0 +1,47 @@
+# Teamspeak Configuration
+teamspeak:
+  image: teamspeak
+  tag: 3.13.7
+  licenseAccept: "accept"
+  teamspeak:
+  ports:
+    udp: 9987
+    tcp:
+      - 10011
+      - 30033
+
+  persistence:
+    enabled: true
+    size: 1Gi
+    storageClass: ""
+    accessModes:
+      - ReadWriteOnce
+    existingClaim: ""
+
+  resources: {}
+  #  limits:
+  #    cpu: 500m
+  #    memory: 512Mi
+  #  requests:
+  #    cpu: 200m
+  #    memory: 256Mi
+
+# Database Configuration
+mariadb:
+  enabled: true
+  auth:
+    rootPassword: ""
+    database: teamspeak
+    username: ""
+    password: ""
+    
+  global:
+    defaultStorageClass: ""
+
+# Network Configuration
+service:
+  type: ClusterIP
+  externalIPs: []
+
+# Custom Labels
+customLabels: {}

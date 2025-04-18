@@ -1,0 +1,62 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: {{ include "teamspeak.fullname" . }}-server
+  labels:
+    {{- include "teamspeak.labels" . | nindent 4 }}
+    {{- with .Values.customLabels }}
+    {{- toYaml . | nindent 4 }}
+    {{- end }}
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      {{- include "teamspeak.selectorLabels" . | nindent 6 }}
+  template:
+    metadata:
+      labels:
+        {{- include "teamspeak.selectorLabels" . | nindent 8 }}
+    spec:
+      containers:
+        - name: teamspeak-server
+          image: "{{ .Values.teamspeak.image }}:{{ .Values.teamspeak.tag }}"
+          ports:
+            - containerPort: {{ .Values.teamspeak.ports.udp }}
+              protocol: UDP
+            {{- range .Values.teamspeak.ports.tcp }}
+            - containerPort: {{ . }}
+              protocol: TCP
+            {{- end }}
+          env:
+            - name: TS3SERVER_LICENSE
+              value: {{ .Values.teamspeak.licenseAccept | quote }}
+            - name: TS3SERVER_DB_PLUGIN
+              value: "ts3db_mariadb"
+            - name: TS3SERVER_DB_SQLCREATEPATH
+              value: "create_mariadb"
+            - name: TS3SERVER_DB_HOST
+              value: {{ include "teamspeak.mariadb.fullname" . }}
+            - name: TS3SERVER_DB_USER
+              value: "root"
+            - name: TS3SERVER_DB_PASSWORD
+              valueFrom:
+                secretKeyRef:
+                  name: {{ include "teamspeak.mariadb.fullname" . }}
+                  key: mariadb-root-password
+            - name: TS3SERVER_DB_NAME
+              value: {{ .Values.mariadb.auth.database | quote }}
+            - name: TS3SERVER_DB_WAITUNTILREADY
+              value: "30"
+          volumeMounts:
+            - name: teamspeak-data
+              mountPath: /var/ts3server
+          resources:
+            {{- toYaml .Values.teamspeak.resources | nindent 12 }}
+      volumes:
+        - name: teamspeak-data
+          {{- if .Values.teamspeak.persistence.enabled }}
+          persistentVolumeClaim:
+            claimName: {{ include "teamspeak.fullname" . }}-data
+          {{- else }}
+          emptyDir: {}
+          {{- end }}
