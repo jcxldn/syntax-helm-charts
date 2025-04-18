@@ -1,6 +1,6 @@
 # Teamspeak Configuration
 teamspeak:
-  image: teamspeak
+  image: docker.io/teamspeak
   tag: 3.13.7
   licenseAccept: "accept"
   teamspeak:
