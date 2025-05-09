@@ -1,0 +1,67 @@
+apiVersion: v1
+entries:
+  mumble:
+  - apiVersion: v2
+    appVersion: v1.5.735-3
+    created: "2025-05-09T16:07:19.954204418Z"
+    description: A Helm chart for providing mumble server to kubernetes
+    digest: 12fbc424562161267759d9310f3b84107f66601a5bca254030280a64d7c04172
+    home: https://github.com/Syntax3rror404/helm-charts
+    icon: https://upload.wikimedia.org/wikipedia/commons/thumb/8/8f/Icons_mumble.svg/600px-Icons_mumble.svg.png
+    keywords:
+    - mumble
+    - voip
+    name: mumble
+    sources:
+    - https://github.com/mumble-voip/mumble-docker
+    type: application
+    urls:
+    - https://github.com/jcxldn/syntax-helm-charts/releases/download/mumble-0.9.2/mumble-0.9.2.tgz
+    version: 0.9.2
+  snipeit:
+  - apiVersion: v2
+    appVersion: 8.1.0
+    created: "2025-05-09T16:07:20.134991578Z"
+    dependencies:
+    - name: mariadb
+      repository: https://charts.bitnami.com/bitnami
+      version: 20.5.5
+    description: A Helm chart for providing snipe-it to kubernetes
+    digest: 963c5aeda0b8657d5ec7683a0bbc447bbfd7388585c5e75fb0eff5b422ae80f1
+    home: https://github.com/jcxldn/syntax-helm-charts
+    icon: https://github.com/snipe/snipe-it/blob/eb9cfbaed6fc830e9b114c625896a636842f2d1a/public/img/demo/snipe-logo-bug.png?raw=true
+    keywords:
+    - snipeit
+    - inventory
+    - asset management
+    name: snipeit
+    sources:
+    - https://github.com/bitnami/charts/tree/main/bitnami/mariadb
+    - https://github.com/snipe/snipe-it
+    type: application
+    urls:
+    - https://github.com/jcxldn/syntax-helm-charts/releases/download/snipeit-1.1.7/snipeit-1.1.7.tgz
+    version: 1.1.7
+  teamspeak:
+  - apiVersion: v2
+    appVersion: 3.13.7
+    created: "2025-05-09T16:07:20.322055346Z"
+    dependencies:
+    - name: mariadb
+      repository: https://charts.bitnami.com/bitnami
+      version: 20.5.5
+    description: A Helm chart for providing teamspeak server to kubernetes
+    digest: bf3a6ec6bea4bfbb3d009dc738d105c437f644532ff711760a2a2ae280d4f9f6
+    home: https://github.com/jcxldn/syntax-helm-charts
+    icon: https://upload.wikimedia.org/wikipedia/commons/e/ec/TeamSpeak_logo_renovado.png
+    keywords:
+    - teamspeak
+    - voip
+    name: teamspeak
+    sources:
+    - https://hub.docker.com/_/teamspeak/
+    type: application
+    urls:
+    - https://github.com/jcxldn/syntax-helm-charts/releases/download/teamspeak-0.9.3/teamspeak-0.9.3.tgz
+    version: 0.9.3
+generated: "2025-05-09T16:07:20.322066186Z"
