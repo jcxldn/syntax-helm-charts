@@ -21,6 +21,22 @@ snipeit:
     url: http://snipeit.example.com
     timezone: Europe/Berlin
     locale: en
+    mail:
+      mailer: smtp
+      host: email-smtp.us-west-2.amazonaws.com
+      port: 587
+      username: YOURUSERNAME
+      password: YOURPASSWORD
+      from:
+        addr: you@example.com
+        name: Snipe-IT
+      reply:
+        addr: you@example.com
+        name: Snipe-IT
+      autoembed:
+        enabled: true
+        method: base64
+      tlsverifypeer: true
   persistence:
     size: 2Gi
     storageClass: longhorn

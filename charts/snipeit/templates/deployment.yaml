@@ -72,6 +72,30 @@ spec:
               value: "{{ .Values.snipeit.config.timezone }}"
             - name: APP_LOCALE
               value: "{{ .Values.snipeit.config.locale }}"
+            - name: MAIL_MAILER
+              value: "{{ .Values.snipeit.config.mail.mailer }}"
+            - name: MAIL_HOST
+              value: "{{ .Values.snipeit.config.mail.host }}"
+            - name: MAIL_PORT
+              value: "{{ .Values.snipeit.config.mail.port }}"
+            - name: MAIL_USERNAME
+              value: "{{ .Values.snipeit.config.mail.username }}"
+            - name: MAIL_PASSWORD
+              value: "{{ .Values.snipeit.config.mail.password }}"
+            - name: MAIL_FROM_ADDR
+              value: "{{ .Values.snipeit.config.mail.from.addr }}"
+            - name: MAIL_FROM_NAME
+              value: "{{ .Values.snipeit.config.mail.from.name }}"
+            - name: MAIL_REPLYTO_ADDR
+              value: "{{ .Values.snipeit.config.mail.reply.addr }}"
+            - name: MAIL_REPLYTO_NAME
+              value: "{{ .Values.snipeit.config.mail.reply.name }}"
+            - name: MAIL_AUTO_EMBED
+              value: "{{ .Values.snipeit.config.mail.autoembed.enabled }}"
+            - name: MAIL_AUTO_EMBED_METHOD
+              value: "{{ .Values.snipeit.config.mail.autoembed.method }}"
+            - name: MAIL_TLS_VERIFY_PEER
+              value: "{{ .Values.snipeit.config.mail.tlsverifypeer }}"
           ports:
             - name: http
               containerPort: {{ .Values.service.port }}
