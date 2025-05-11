@@ -21,6 +21,29 @@ entries:
   snipeit:
   - apiVersion: v2
     appVersion: 8.1.0
+    created: "2025-05-11T09:23:25.329620081Z"
+    dependencies:
+    - name: mariadb
+      repository: https://charts.bitnami.com/bitnami
+      version: 20.5.5
+    description: A Helm chart for providing snipe-it to kubernetes
+    digest: 9d6c21bc86682d724b0f1fe0add7a01895ddb93f4960b399e937ae6a2fa4936d
+    home: https://github.com/jcxldn/syntax-helm-charts
+    icon: https://github.com/snipe/snipe-it/blob/eb9cfbaed6fc830e9b114c625896a636842f2d1a/public/img/demo/snipe-logo-bug.png?raw=true
+    keywords:
+    - snipeit
+    - inventory
+    - asset management
+    name: snipeit
+    sources:
+    - https://github.com/bitnami/charts/tree/main/bitnami/mariadb
+    - https://github.com/snipe/snipe-it
+    type: application
+    urls:
+    - https://github.com/jcxldn/syntax-helm-charts/releases/download/snipeit-1.1.8/snipeit-1.1.8.tgz
+    version: 1.1.8
+  - apiVersion: v2
+    appVersion: 8.1.0
     created: "2025-05-09T16:07:20.134991578Z"
     dependencies:
     - name: mariadb
@@ -64,4 +87,4 @@ entries:
     urls:
     - https://github.com/jcxldn/syntax-helm-charts/releases/download/teamspeak-0.9.3/teamspeak-0.9.3.tgz
     version: 0.9.3
-generated: "2025-05-09T16:07:20.322066186Z"
+generated: "2025-05-11T09:23:25.329632454Z"
