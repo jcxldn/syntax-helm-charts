@@ -55,6 +55,8 @@ spec:
               value: "{{ .Values.mariadb.auth.password }}"
             - name: DB_DATABASE 
               value: "{{ .Values.mariadb.auth.database }}"
+            - name: DB_PORT 
+              value: "{{ .Values.mariadb.auth.port }}"
             - name: DB_HOST 
               value: "{{ .Release.Name }}-mariadb"
             - name: APP_KEY 

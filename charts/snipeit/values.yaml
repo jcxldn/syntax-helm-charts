@@ -10,6 +10,7 @@ mariadb:
     database: "snipeit"
     username: "snipeit"
     password: "snipeitdbsecret"
+    port: 3306
 
 # snipeit config
 snipeit:
