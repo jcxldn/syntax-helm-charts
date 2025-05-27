@@ -38,9 +38,11 @@ snipeit:
         method: base64
       tlsverifypeer: true
   persistence:
+    enabled: true
     size: 2Gi
     storageClass: longhorn
     accessMode: ReadWriteOnce
+    existingClaim: ""
   image:
     repository: docker.io/snipe/snipe-it
     pullPolicy: IfNotPresent
